@@ -1,0 +1,130 @@
+﻿@model Kucheza.Models.EditViewModel
+@{
+    /**/
+
+    ViewBag.Title = "Edytuj";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Manage"))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.miasto, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.miasto, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.miasto, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.opis, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.opis, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.opis, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.wiek, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.wiek, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.wiek, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.dzienUrodzin, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.dzienUrodzin, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.dzienUrodzin, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.miesiacUrodzin, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.miesiacUrodzin, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.miesiacUrodzin, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.rokUrodzin, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.rokUrodzin, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.rokUrodzin, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.aktualnaPraca, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.aktualnaPraca, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.aktualnaPraca, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.plec, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.plec, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.plec, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.religia, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.religia, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.religia, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.opcjaPolityczna, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.opcjaPolityczna, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.opcjaPolityczna, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ulubionyCytat, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.ulubionyCytat, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ulubionyCytat, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.wyksztalcenie, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.wyksztalcenie, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.wyksztalcenie, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.zdjecieProfilowe, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.zdjecieProfilowe, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.zdjecieProfilowe, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @Html.HiddenFor(m => m.Id)
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
